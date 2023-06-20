@@ -65,7 +65,6 @@ body {
   justify-content: center;
   padding: 20px 80px;
   background: #cd1616;
-  box-shadow: 0 5px 15px rgb(241, 116, 116);
   z-index: 999;
   position:sticky;
   top: 0;
@@ -110,40 +109,73 @@ body {
 
 /* Home page */
 #show {
-  background-color: #000000;
-  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+ 
   height: 80vh;
   width: 100%;
   background-size: cover;
   background-position: top 25% right 0;
-  padding: 0 90px;
-  display: flex;
+  
+
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
 }
+.show-bg{
+  background-image: url('/img/background2.jpg');
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.show-txt{
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgb(133 130 130 / 70%); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 1px  #f1f1f1;
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  max-width: fit-content;
+  max-height:fit-content;
+  padding: 20px;
+  text-align:start;
+}
 
 #show h4 {
   padding-bottom: 15px;
+  color: #ffffff;
 }
 .whatsapp{
   font-size: 36px;
-  color:green;
+  color:rgb(0, 187, 0);
 }
 
 .phone{
   font-size: 30px;
-  color: rgb(15, 95, 200);
+  color: rgb(43, 119, 220);
+}
+.phone:hover{
+  color: #1EA1F2;
 }
 
 .whatsapp:hover{
-  color: chartreuse;
+  color: rgb(158, 221, 95);
  
 }
 
 #show h1 {
-  color: #5e0c5b;
+  color: #f80000;
 }
 #show div{
   padding-left:80px ;
@@ -324,11 +356,16 @@ body {
 }
 
 .description img{
+  float: left;
   margin: 10px 30px;
   width: 70vw;
   height: 60vh;
   box-shadow: 20px 20px 20px rgb(139, 35, 170);
   border-radius: 14px;
+}
+
+.text-wrap{
+  text-align: justify;
 }
 
 #product .pro .des h3,#product2 .pro .des h3{
@@ -483,7 +520,89 @@ footer a{
     background-color:#78bf59;
 }
 
-@media (max-width:799px) {
+@media (max-width:1050px) {
+  .logo{
+    width: 16%;
+  }
+
+  #show div {
+    padding-left: 0px;
+}
+
+#show div {
+  padding-left: 50px;
+  width: 100%;
+}
+
+.refer i{
+  font-size: 20px;
+}
+}
+
+
+@media (max-width:900px) {
+  #product .pro, #product2 .pro{
+    min-width: 200px;
+  }
+}
+
+@media (max-width:950px) {
+  #show {
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#product{
+  padding: 100px 150px;
+}
+
+
+
+  #show div {
+    padding-left: 50px;
+    width: 100%;
+  }
+  .description{
+    display: block;
+  }
+  
+  .description img{
+    float: left;
+    margin: 10px 30px;
+    width: 70vw;
+    height: 60vh;
+    box-shadow: 20px 20px 20px rgb(139, 35, 170);
+    border-radius: 14px;
+  }
+}
+
+
+@media (max-width:550px) {
+  #product {
+    text-align: center;
+    background: #434343;
+    padding: 100px 40px;
+}
+
+#product .pro-container, #product2 .pro-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+}
+@media (max-width:850px) {
   #navbar {
     display: flex;
     flex-direction: column;
@@ -502,8 +621,18 @@ footer a{
 
 #navbar.active{
   right: 0;
-}
+} 
 
+#product .pro-container, #product2 .pro-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 40vw;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.logo{
+  width: 10%;
+}
 
 
 #navbar li{
@@ -531,5 +660,9 @@ footer a{
   left: 30px;
   color: #fff;
   font-size: 30px;
+}
+
+#product{
+  padding: 70px 0;
 }
 }
