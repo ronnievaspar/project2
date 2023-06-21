@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-*,body, html {
+body, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "League Spartan", sans-serif;
+}
+
+*,*:before,*:after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 a{
@@ -55,9 +61,80 @@ body {
   }
 
 
-  
-
 /* header start */
+
+.top#blur.active{
+  filter: blur(20px);
+  pointer-events: none;
+  user-select: none;
+}
+
+#pop{
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width:50vw;
+  padding: 50px;
+  color: #ccc;
+  box-shadow: 0 5px 30px rgba(255, 0, 0, 0.3);
+  background: #000000;
+  z-index: 1200;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+ #pop.active{
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s; 
+  filter: blur(0);
+}
+
+.contact-pop{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.contact-pop .icon a{
+  display: block;
+  color:#ccc;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 2vw;
+}
+
+.contact-pop p {
+  color: #ccc;
+  font-size: 2vw;
+}
+
+#pop h2{
+  text-align: center;
+  padding: 2vw 0;
+  font-size: 4vw;
+}
+
+#close-pop{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+} 
+
+#close-pop a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 2vw;
+  padding: 5px 10px;
+  margin-top: 15px;
+  background: red;
+  border-radius: 20px;
+}
+
 
 #header {
   display: flex;
@@ -386,7 +463,7 @@ body {
 
 #product .pro-container,#product2 .pro-container{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 20px;
   flex-wrap: wrap;
 }
@@ -592,6 +669,10 @@ footer a{
     text-align: center;
     background: #434343;
     padding: 100px 40px;
+}
+
+#pop{
+  padding: 20px;
 }
 
 #product .pro-container, #product2 .pro-container {
