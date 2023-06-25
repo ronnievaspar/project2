@@ -125,12 +125,12 @@ body {
   color:#ccc;
   padding: 5px;
   text-decoration: none;
-  font-size: 2vw;
+  font-size: 3vw;
 }
 
 .contact-pop p {
   color: #ccc;
-  font-size: 2vw;
+  font-size: 3vw;
 }
 
 #pop h2{
@@ -270,6 +270,15 @@ body {
 .whatsapp:hover{
   color: rgb(158, 221, 95);
  
+}
+
+.top-2 h4{
+  color: rgb(255, 255, 255);
+}
+
+.rates a{
+  text-decoration: none;
+  color: red;
 }
 
 #show h1 {
@@ -637,6 +646,9 @@ footer a{
   padding:0px;
   margin:0px;
 }
+
+
+
 .social{
   list-style:none;
 }
@@ -657,16 +669,8 @@ footer a{
   color:#fff;
   transition:all 0.8s ease-in-out;
 }
-.fb{
-  background-color:#3C5A98;
-}
-.twitter{
-    background-color:#1EA1F2;
-    color: white;
-}
-.insta{
-    background-color:#DC4F42;
-}
+
+
 .pin{
     background-color:#ffffff;
 }
@@ -703,7 +707,7 @@ footer a{
 
 @media (max-width:900px) {
   #product .pro, #product2 .pro{
-    min-width: 200px;
+    min-width: 275px;
   }
 }
 
@@ -711,7 +715,7 @@ footer a{
   ul.more-areas-cont li {
     float: left;
     width: 33%;
-    font-size: 2vw;
+    font-size: 3vw;
     margin: 5px 20px;
 
   }
@@ -837,12 +841,16 @@ footer a{
   transform: translate(-11vw, 20vh);
 }
 
+#product .pro, #product2 .pro {
+  min-width: 300px;
+}
+
 #show h2{
   font-size: 24px;
 }
 
 #show h4 {
-  font-size: 10px;
+  font-size: 17px;
 
   color: #ffffff;
 }
