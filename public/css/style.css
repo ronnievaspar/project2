@@ -767,10 +767,10 @@ footer a{
   .description img{
     float: left;
     margin: 10px 30px;
-    width: 35vw;
+    width: 50vw;
     height: 60vh;
-    box-shadow: 20px 20px 20px rgb(139, 35, 170);
-    border-radius: 14px;
+    box-shadow: 10px 10px 10px rgb(139, 35, 170);
+    border-radius: 9px;
   }
 }
 
