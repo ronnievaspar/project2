@@ -169,7 +169,7 @@ body {
 }
 
 #navbar {
-  padding: 30px 0 ;
+  padding: 0 ;
   display:block;
   align-items: center;
   justify-content: center;
@@ -235,7 +235,7 @@ body {
 
 .show-txt{
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgb(133 130 130 / 70%); /* Black w/opacity/see-through */
+  background-color: rgba(100, 96, 96, 0.7); /* Black w/opacity/see-through */
   color: white;
   font-weight: bold;
   border: 1px  #f1f1f1;
@@ -244,7 +244,7 @@ body {
   left: 30%;
   transform: translate(-11vw, 100vh);
   z-index: 2;
-  max-width: fit-content;
+  max-width:fit-content;
   max-height:fit-content;
   padding: 20px;
   text-align:start;
@@ -277,8 +277,8 @@ body {
 }
 
 .rates a{
-  text-decoration: none;
-  color: red;
+ 
+  color: rgb(0, 0, 0);
 }
 
 #show h1 {
@@ -424,10 +424,21 @@ body {
   margin: 15px 0;
   position: relative;
 }
+.rate .services{
+  background-color: #b81212;
+  
+} 
+.rate .services h4{
+  color: white;
+}
+
+
 
 .services{
   background:#434343 ;
   color: #ccc;
+  
+  border-radius: 20px;
 }
 
 .services h4{
@@ -516,11 +527,19 @@ padding: 20px;
 
 /* footer */
 
-hr {
+.hr1 {
   border: 0;
   height: 8px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(188, 12, 12), rgba(0, 0, 0, 0));
 }
+
+.hr2{
+  border: 0;
+  height: 4px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(188, 12, 12), rgba(0, 0, 0, 0));
+}
+
+
 
 .more-areas{
   
@@ -555,10 +574,10 @@ ul.more-areas-cont li{
   font-size: 5vw;
 }
 
-.more-areas  a{
+/* .more-areas  a{
   text-decoration: none;
   
-}
+} */
 
 
 /* test */
@@ -766,7 +785,7 @@ footer a{
   
   .description img{
     float: left;
-    margin: 10px 30px;
+    margin: 10px 10px;
     width: 50vw;
     height: 60vh;
     box-shadow: 10px 10px 10px rgb(139, 35, 170);
@@ -838,7 +857,7 @@ footer a{
 }
 
 .show-txt{
-  transform: translate(-11vw, 20vh);
+  transform: translate(-11vw, 35vh);
 }
 
 #product .pro, #product2 .pro {
@@ -846,16 +865,17 @@ footer a{
 }
 
 #show h2{
-  font-size: 24px;
+  font-size: 27px;
 }
 
 #show h4 {
-  font-size: 17px;
-
+  font-size: 15px;
+  padding-bottom: 0;
   color: #ffffff;
 }
+
 .whatsapp{
-  font-size: 36px;
+  font-size: 40px;
   color:rgb(0, 187, 0);
 }
 
@@ -871,7 +891,6 @@ footer a{
   color: rgb(158, 221, 95);
  
 }
-
 
 
 #show h1 {
