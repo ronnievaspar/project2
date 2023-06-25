@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+  @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
 
 body, html {
   margin: 0;
@@ -6,6 +8,24 @@ body, html {
   box-sizing: border-box;
   font-family: "League Spartan", sans-serif;
 }
+
+#start-h2{
+  font-size: 2vw;
+  color: #000000;
+  text-align: center;
+  padding: 4px 0 20px;
+}
+
+.head-logo{
+  display:block;
+  font-family: 'League Spartan', sans-serif;
+font-family: 'Playfair Display SC', serif;
+font-size: 7vw;
+color: black; 
+text-decoration: none;
+text-align: center;
+}
+
 
 *,*:before,*:after{
   padding: 0;
@@ -137,62 +157,63 @@ body {
 
 
 #header {
-  display: flex;
+  display: inherit;
   align-items: center;
   justify-content: center;
   padding: 20px 80px;
   background: #cd1616;
   z-index: 999;
-  position:sticky;
+  position:relative;
   top: 0;
   left: 0;
 }
 
 #navbar {
-  display: flex;
+  padding: 30px 0 ;
+  display:block;
   align-items: center;
   justify-content: center;
 }
 
+
 #navbar li {
+  display:grid;
+  background: #000000;
+  color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: center;
   list-style: none;
-  padding: 0 20px;
+  padding: 20px 20px;
+  margin: 5px;
   position: relative;
 }
 
+
 #navbar li a {
   text-decoration: none;
-  font-size: 26px;
+  font-size: 3vw;
   font-weight: 600;
-  color: #1a1a1a;
-  transition: 0.3s ease;
-}
-
-#navbar li a:hover{
   color: #ffffff;
 }
 
-#mobile{
-  display: none;
-  align-items: center;
-}
-#close{
-  display: none;
+#navbar li:hover{
+  background-color: #c71b1b;
+  color: #000000;
 }
 
-.active{
-  color: #ffff !important;
-}
+
+
+
+
+
 
 /* Home page */
 #show {
  
-  height: 80vh;
+  height: 90vh;
   width: 100%;
   background-size: cover;
-  background-position: top 25% right 0;
-  
-
+  /* background-position: top 25% right 0; */
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
@@ -221,7 +242,7 @@ body {
   position: absolute;
   top: 60%;
   left: 30%;
-  transform: translate(-50%, -50%);
+  transform: translate(-11vw, 100vh);
   z-index: 2;
   max-width: fit-content;
   max-height:fit-content;
@@ -429,21 +450,19 @@ body {
 }
 
 .description{
-  display: flex;
+  /* display: flex; */
 }
 
 .description img{
   float: left;
   margin: 10px 30px;
-  width: 70vw;
+  width: 20vw;
   height: 60vh;
   box-shadow: 20px 20px 20px rgb(139, 35, 170);
   border-radius: 14px;
 }
 
-.text-wrap{
-  text-align: justify;
-}
+
 
 #product .pro .des h3,#product2 .pro .des h3{
   padding: 10px 0;
@@ -494,6 +513,64 @@ hr {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(188, 12, 12), rgba(0, 0, 0, 0));
 }
 
+.more-areas{
+  
+  padding: 30px 0;
+
+  background: #000000;
+  color: #ccc;
+}
+
+.more-areas-cont{
+  float: left;
+  width: 100%;
+
+}
+
+.list-local{
+  list-style: disc;
+}
+
+ul.more-areas-cont li{
+  float: left;
+  width: 38%;
+  
+  font-size: 2vw;
+ margin: 10px 50px;
+}
+
+
+.more-areas h4{
+  text-align: center;
+  padding: 4vh;
+  font-size: 5vw;
+}
+
+.more-areas  a{
+  text-decoration: none;
+  
+}
+
+
+/* test */
+.lft_menu_lnk {
+  height: 22px;
+  margin-left: -20px;
+  list-style: disc;
+  padding-top: 5px;
+  font-weight: bold;
+}
+ul.list2col {
+  float: left;
+  width: 100%;
+  margin: 0 0 1em 0;
+}
+
+
+
+
+
+
 footer{
   background:#000000;
   padding: 40px 0;
@@ -507,7 +584,7 @@ footer .foot-li{
 
 
 footer .col{
-  width:30%;
+  width:50%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -515,7 +592,7 @@ footer .col{
 }
 
 footer .logo{
-  width: 25%;
+  width: 15%;
   margin-bottom: 10px;
   background: red;
   border-radius: 10px;
@@ -597,6 +674,13 @@ footer a{
     background-color:#78bf59;
 }
 
+@media (max-width:1500px) {
+  .show-txt{
+   
+    transform: translate(-11vw, 70vh);
+  }
+}
+
 @media (max-width:1050px) {
   .logo{
     width: 16%;
@@ -622,6 +706,29 @@ footer a{
     min-width: 200px;
   }
 }
+
+@media (max-width:970px) {
+  ul.more-areas-cont li {
+    float: left;
+    width: 33%;
+    font-size: 2vw;
+    margin: 5px 20px;
+
+  }
+
+  .show-txt{
+    transform: translate(-11vw, 40vh);
+  }
+}
+
+.more-areas .container{
+
+    width: 90vw;
+    padding: 0px 15px 10px 15px;
+    margin-left: auto;
+}
+
+
 
 @media (max-width:950px) {
   #show {
@@ -656,7 +763,7 @@ footer a{
   .description img{
     float: left;
     margin: 10px 30px;
-    width: 70vw;
+    width: 35vw;
     height: 60vh;
     box-shadow: 20px 20px 20px rgb(139, 35, 170);
     border-radius: 14px;
@@ -664,28 +771,8 @@ footer a{
 }
 
 
-@media (max-width:550px) {
-  #product {
-    text-align: center;
-    background: #434343;
-    padding: 100px 40px;
-}
-
-#pop{
-  padding: 20px;
-  width: 70vw;
-}
-
-#product .pro-container, #product2 .pro-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  flex-wrap: wrap;
-}
-}
 @media (max-width:850px) {
-  #navbar {
+  /* #navbar {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -711,29 +798,16 @@ footer a{
   padding: 0 40vw;
   flex-wrap: wrap;
   align-content: space-between;
-}
+} */
 .logo{
   width: 10%;
 }
 
 
-#navbar li{
-  margin-bottom: 25px;
-}
-
 #header{
   padding: 10px 20px ;
 }
 
-#mobile{
-  display: flex;
-  align-items: center;
-}
-#mobile i{
-  color: #fff;
-  font-size: 30px;
-  padding-left: 20px;
-}
 
 #close{
   display: initial;
@@ -746,5 +820,100 @@ footer a{
 
 #product{
   padding: 70px 0;
+}
+}
+
+
+
+
+@media (max-width:550px) {
+  #product {
+    text-align: center;
+    background: #434343;
+    padding: 100px 40px;
+}
+
+.show-txt{
+  transform: translate(-11vw, 20vh);
+}
+
+#show h2{
+  font-size: 24px;
+}
+
+#show h4 {
+  font-size: 10px;
+
+  color: #ffffff;
+}
+.whatsapp{
+  font-size: 36px;
+  color:rgb(0, 187, 0);
+}
+
+.phone{
+  font-size: 30px;
+  color: rgb(43, 119, 220);
+}
+.phone:hover{
+  color: #1EA1F2;
+}
+
+.whatsapp:hover{
+  color: rgb(158, 221, 95);
+ 
+}
+
+
+
+#show h1 {
+  font-size: 20px;
+  color: #f80000;
+  line-height: normal;
+}
+#show div{
+  padding-left:20px ;
+}
+
+
+#navbar li {
+  display:grid;
+  background: #000000;
+  color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 10px 20px;
+  margin: 10px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+#navbar li a {
+  font-size: 5vw;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+#start-h2 {
+  font-size: 3vw;
+  padding:  0 20px;
+}
+
+.head-logo{
+  font-size: 7vw;
+}
+
+#pop{
+  padding: 20px;
+  width: 70vw;
+}
+
+#product .pro-container, #product2 .pro-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  flex-wrap: wrap;
 }
 }
