@@ -259,6 +259,8 @@ body {
   color:rgb(0, 187, 0);
 }
 
+
+
 .phone{
   font-size: 30px;
   color: rgb(43, 119, 220);
@@ -445,16 +447,18 @@ body {
   text-align: center;
 }
 
-#product .pro img,#product2 .pro img{
+#product .pro> img,#product2 .pro> img{
   width:100%;
+  min-height: 50vh;
   border-radius: 20px;
 }
 
 #product .pro a img, #product2 .pro a img{
-  width: 26px;
+  width: 35px;
+
   position: absolute;
-  bottom: 20px;
-  right: 40px;
+  bottom: 13px;
+  right: 62px;
 }
 
 #product .pro .des,#product2 .pro .des{
@@ -861,7 +865,7 @@ footer a{
 }
 
 #product .pro, #product2 .pro {
-  min-width: 300px;
+  min-width: 310px;
 }
 
 #show h2{
